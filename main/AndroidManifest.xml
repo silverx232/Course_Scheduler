@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="wgu.c196.rachel.coursescheduler">
+
+    <application
+        android:name=".util.AlertChannels"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CourseScheduler">
+        <activity
+            android:name=".controller.InstructorsActivity"
+            android:label="@string/course_instructors"
+            android:exported="false" />
+        <activity
+            android:name=".controller.HomePageActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".controller.AddAssessmentActivity"
+            android:label="@string/add_assessment"
+            android:exported="false" />
+        <activity
+            android:name=".controller.AssessmentsActivity"
+            android:label="@string/assessments"
+            android:exported="false" />
+        <activity
+            android:name=".controller.AddCourseInstructorActivity"
+            android:label="@string/add_instructor"
+            android:exported="false" />
+        <activity
+            android:name=".controller.AddCourseActivity"
+            android:label="@string/add_course"
+            android:exported="false" />
+        <activity
+            android:name=".controller.AddTermActivity"
+            android:label="@string/add_term"
+            android:exported="false" />
+        <activity
+            android:name=".controller.CourseViewActivity"
+            android:label="@string/view_course"
+            android:exported="false" />
+        <activity
+            android:name=".controller.CourseActivity"
+            android:label="@string/courses"
+            android:exported="false" />
+        <activity
+            android:name=".controller.AssessmentViewActivity"
+            android:label="@string/view_assessment"
+            android:exported="false" />
+        <activity
+            android:name=".controller.TermsActivity"
+            android:label="@string/terms"
+            android:exported="false" />
+
+        <receiver android:name=".util.AlertReceiver" />
+
+    </application>
+
+</manifest>

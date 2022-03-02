@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".controller.AssessmentViewActivity">
+
+        <TextView
+            android:id="@+id/assessment_title_textview"
+            style="@style/add_term_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Assessment Title" />
+
+        <TextView
+            android:id="@+id/course_name_textview2"
+            style="@style/add_term_info_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/course_name"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessment_title_textview" />
+
+        <TextView
+            android:id="@+id/assessment_type_textview"
+            style="@style/add_term_info_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_name_textview2" />
+
+        <TextView
+            android:id="@+id/start_date_textview6"
+            style="@style/add_term_info_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/start_date"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessment_type_textview" />
+
+        <TextView
+            android:id="@+id/end_date_textview6"
+            style="@style/add_term_info_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/end_date"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/start_date_textview6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="170dp" />
+
+        <TextView
+            android:id="@+id/course_name_info"
+            style="@style/add_term_info_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/course_name_textview2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            tools:text="Course 1" />
+
+        <TextView
+            android:id="@+id/assessment_type_info"
+            style="@style/add_term_info_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/assessment_type_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            tools:text="Performance" />
+
+        <TextView
+            android:id="@+id/start_date_info"
+            style="@style/add_term_info_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/start_date_textview6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            tools:text="start date" />
+
+        <TextView
+            android:id="@+id/end_date_info"
+            style="@style/add_term_info_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/end_date_textview6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            tools:text="End date" />
+
+        <TextView
+            android:id="@+id/assessment_alert_textv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/set_alert"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/end_date_info" />
+
+        <Switch
+            android:id="@+id/assessment_start_date_switch"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:text="@string/start_date"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessment_alert_textv" />
+
+        <Switch
+            android:id="@+id/assessment_end_date_switch"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:text="@string/end_date"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/assessment_start_date_switch" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

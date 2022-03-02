@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".controller.AddAssessmentActivity">
+
+            <TextView
+                android:id="@+id/add_assessment_title"
+                style="@style/add_term_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_assessment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/assessment_name_textview"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_assessment_title" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="130dp" />
+
+            <TextView
+                android:id="@+id/course_textview"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/course"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/assessment_title_edittext" />
+
+            <TextView
+                android:id="@+id/type_textview"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/type"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_textview" />
+
+            <TextView
+                android:id="@+id/start_date_textview7"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/start_date"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/type_textview" />
+
+            <TextView
+                android:id="@+id/end_date_textview7"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/end_date"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_date_calendar" />
+
+            <EditText
+                android:id="@+id/assessment_title_edittext"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/enter_assessment_name"
+                android:inputType="textPersonName"
+                app:layout_constraintBaseline_toBaselineOf="@+id/assessment_name_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/assessment_name_textview" />
+
+            <Button
+                android:id="@+id/select_start_date_button"
+                style="@style/edit_term_date_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/select_date"
+                app:layout_constraintBaseline_toBaselineOf="@+id/start_date_textview7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline5" />
+
+            <Button
+                android:id="@+id/select_end_date_button"
+                style="@style/edit_term_date_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/select_date"
+                app:layout_constraintBaseline_toBaselineOf="@+id/end_date_textview7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline5" />
+
+            <Spinner
+                android:id="@+id/type_spinner"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/course_textview" />
+
+            <Spinner
+                android:id="@+id/course_spinner"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/assessment_title_edittext" />
+
+            <Button
+                android:id="@+id/save_button"
+                style="@style/add_term_save_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end_date_calendar" />
+
+            <CalendarView
+                android:id="@+id/start_date_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_date_textview7" />
+
+            <CalendarView
+                android:id="@+id/end_date_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end_date_textview7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

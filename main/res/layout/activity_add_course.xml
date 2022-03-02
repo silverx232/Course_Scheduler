@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".controller.AddCourseActivity">
+
+            <TextView
+                android:id="@+id/end_date_textview5"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/end_date"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_date_calendarview2" />
+
+            <TextView
+                android:id="@+id/start_date_textview5"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/start_date"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/status_textview5" />
+
+            <TextView
+                android:id="@+id/course_name_textview"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/course_name"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_course_textview" />
+
+            <TextView
+                android:id="@+id/add_course_textview"
+                style="@style/add_term_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/add_course"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/start_date_button"
+                style="@style/edit_term_date_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/select_date"
+                app:layout_constraintBaseline_toBaselineOf="@+id/start_date_textview5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4" />
+
+            <Button
+                android:id="@+id/end_date_button"
+                style="@style/edit_term_date_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/select_date"
+                app:layout_constraintBaseline_toBaselineOf="@+id/end_date_textview5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="153dp" />
+
+            <TextView
+                android:id="@+id/status_textview5"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_name_textview" />
+
+            <EditText
+                android:id="@+id/course_name_edittext"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/enter_course_name"
+                android:inputType="textPersonName"
+                app:layout_constraintBaseline_toBaselineOf="@+id/course_name_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4" />
+
+            <TextView
+                android:id="@+id/instructor_textview"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/instructor"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/end_date_calendarview2" />
+
+            <Spinner
+                android:id="@+id/instructor_spinner"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/end_date_calendarview2" />
+
+            <TextView
+                android:id="@+id/note_textview5"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/note"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/select_term_textview" />
+
+            <EditText
+                android:id="@+id/edit_note_text"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:scrollIndicators="end"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/note_textview5" />
+
+            <Spinner
+                android:id="@+id/course_status_spinner"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/course_name_textview" />
+
+            <Button
+                android:id="@+id/save_button2"
+                style="@style/add_term_save_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_note_text" />
+
+            <CalendarView
+                android:id="@+id/start_date_calendarview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_date_textview5" />
+
+            <CalendarView
+                android:id="@+id/end_date_calendarview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end_date_textview5" />
+
+            <TextView
+                android:id="@+id/select_term_textview"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/term"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instructor_textview" />
+
+            <Spinner
+                android:id="@+id/term_spinner"
+                style="@style/add_term_info_style"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/instructor_textview" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>
